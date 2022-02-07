@@ -1,6 +1,11 @@
 GO    := go
-PROMU := $(GOPATH)/bin/promu
 
+ifndef $(GOPATH)
+    GOPATH=$(shell go env GOPATH)
+    export GOPATH
+endif
+
+PROMU := $(GOPATH)/bin/promu
 PREFIX  ?= $(shell pwd)
 BIN_DIR ?= $(shell pwd)
 
