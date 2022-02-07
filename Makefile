@@ -5,7 +5,7 @@ ifndef $(GOPATH)
     export GOPATH
 endif
 
-PROM := $(GOPATH)/bin/promu
+PROMU := $(GOPATH)/bin/promu
 PREFIX  ?= $(shell pwd)
 BIN_DIR ?= $(shell pwd)
 
